@@ -3,7 +3,11 @@
   <%= f.label :name %>:
   <%= f.text_field :name %><br />
 
+
+
+  <%= f.label 'Artists'  %>
   <%= f.collection_select(:artist_id, Artist.all, :id, :name) %>
+  <%= f.label 'Genres' %>
   <%= f.collection_select(:genre_id, Genre.all, :id, :name)  %>
 
   <%= f.submit %>
